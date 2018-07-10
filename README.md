@@ -86,3 +86,12 @@ Daemonix::DaemonProcess.stop_all
 Daemonix::DaemonProcess.running?(pid)
 ```
 
+
+
+## TIP
+
+To see all ruby processes running in terminal : 
+
+```bash
+pgrep ruby
+```
