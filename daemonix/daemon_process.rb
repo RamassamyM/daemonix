@@ -169,15 +169,12 @@ module Daemonix
       end
 
       def action_to_daemon
-        fpath = File.expand_path(File.join(File.dirname(__FILE__), 'log.txt'))
-        File.open(fpath, 'a') { |f| f << fpath }
-        loop do
-          File.open(fpath, 'a') { |f| f << "looping \n" }
-          sleep 2
-        end
+        # you can add default action
       end
 
-      def after_stop_action; end
+      def after_stop_action
+        # you can add default callbacks actions
+      end
     end
   end
 end
